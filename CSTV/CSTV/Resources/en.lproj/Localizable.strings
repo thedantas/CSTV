@@ -1,0 +1,38 @@
+/* 
+  Localizable.strings
+  CSTV
+
+  Created by André  Costa Dantas on 27/08/24.
+  
+*/
+
+// MARK: - Initial Screen
+"Main Title" = "Partidas";
+
+// MARK: AlertViewModel
+"Connection Timeout" = "Connection Timeout";
+"The connection timed out, please check your internet connection and try again." = "The connection timed out, please check your internet connection and try again.";
+
+"Could not establish connection" = "Could not establish connection";
+"We could not establish a secure connection to the server, please check your internet connection and try again. If the problem persists, please contact support." = "We could not establish a secure connection to the server, please check your internet connection and try again. If the problem persists, please contact support.";
+
+"Bad URL" = "Bad URL";
+"There is something wrong with the URL you are trying to access. Please try again in a few minutes or contact support if the problem persists." = "There is something wrong with the URL you are trying to access. Please try again in a few minutes or contact support if the problem persists.";
+
+"Server not found" = "Server not found";
+"We could not establish a connection to the server, please check your internet connection and try again. If the problem persists, please contact support." = "We could not establish a connection to the server, please check your internet connection and try again. If the problem persists, please contact support.";
+
+"Lost connection" = "Lost connection";
+"You are not connected to the Internet, please check your connection and try again." = "You are not connected to the Internet, please check your connection and try again.";
+
+"Not found" = "Not found";
+"The resource you are trying to reach does not exist." = "The resource you are trying to reach does not exist.";
+
+"Unknown error" = "Unknown error";
+"An unknown network error occured, please check your internet connection and try again. If the error persists, please contact support." = "An unknown network error occured, please check your internet connection and try again. If the error persists, please contact support.";
+
+"Your request did not return any data." = "Your request did not return any data.";
+
+"An unknown internal error occured, please check your internet connection and try again. If the error persists, please contact support." = "An unknown internal error occured, please check your internet connection and try again. If the error persists, please contact support.";
+
+"There was an error";

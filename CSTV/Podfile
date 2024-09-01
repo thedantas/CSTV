@@ -1,0 +1,23 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '11.0' # Atualize a versão mínima do iOS, se necessário
+
+target 'CSTV' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for CSTV
+  pod 'SwiftLint'      # Linter para manter o código consistente e limpo
+  pod 'Kingfisher'     # Biblioteca para download e cache de imagens
+  pod 'RxSwift'        # Biblioteca para programação reativa
+  pod 'RxCocoa'        # Extensões para Cocoa utilizando RxSwift
+
+  target 'CSTVTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'CSTVUITests' do
+    # Pods for testing
+  end
+
+end

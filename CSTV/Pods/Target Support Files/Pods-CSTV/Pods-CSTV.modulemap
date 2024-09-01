@@ -1,0 +1,6 @@
+framework module Pods_CSTV {
+  umbrella header "Pods-CSTV-umbrella.h"
+
+  export *
+  module * { export * }
+}
