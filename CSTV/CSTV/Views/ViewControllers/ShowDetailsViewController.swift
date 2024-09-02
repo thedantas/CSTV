@@ -11,7 +11,6 @@ import RxCocoa
 
 class ShowDetailsViewController: UIViewController, UIGestureRecognizerDelegate {
 
-    //MARK: UI
     let scrollView: UIScrollView = {
         let v = UIScrollView()
         v.translatesAutoresizingMaskIntoConstraints = false
@@ -20,7 +19,6 @@ class ShowDetailsViewController: UIViewController, UIGestureRecognizerDelegate {
         return v
     }()
 
-    /// Team 1
     let teamOneImageView: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
@@ -41,7 +39,7 @@ class ShowDetailsViewController: UIViewController, UIGestureRecognizerDelegate {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.spacing = 66
-        stackView.distribution = .fill
+        stackView.distribution = .fillEqually
         stackView.alignment = .fill
         stackView.contentMode = .scaleToFill
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -68,7 +66,7 @@ class ShowDetailsViewController: UIViewController, UIGestureRecognizerDelegate {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.spacing = 66
-        stackView.distribution = .fill
+        stackView.distribution = .fillEqually
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
@@ -77,7 +75,6 @@ class ShowDetailsViewController: UIViewController, UIGestureRecognizerDelegate {
         let label = UILabel()
         label.font = UIFont(name: "Roboto", size: 14)
         label.textColor = .white
-        label.text = "Hoje 21:00"
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -231,8 +228,6 @@ class ShowDetailsViewController: UIViewController, UIGestureRecognizerDelegate {
                 }
                 self?.viewModel.removeAllItems()
                 self?.displayTeamTwoDetails()
-                self?.loadViewIfNeeded()
-                self?.updateFocusIfNeeded()
             }, onFailure: { [weak self] error in
                 self?.handleError(error)
             })

@@ -12,7 +12,7 @@ class DetailsViewModel {
     typealias Model = PlayerDictionary
 
     // MARK: - Properties
-    private let service: Services
+    private let service: Gettable?
     private let disposeBag = DisposeBag()
 
     private(set) var itemsRelay = BehaviorRelay<[PlayerDictionary]>(value: [])
@@ -20,7 +20,7 @@ class DetailsViewModel {
     let errorRelay = PublishRelay<Error>()
 
     // MARK: - Init
-    init(service: Services) {
+    init<S: Gettable>(service: S) {
         self.service = service
     }
 
@@ -37,6 +37,11 @@ class DetailsViewModel {
 
     // MARK: - Fetch data
     func fetchTeam(teamID: Int) -> Single<Bool> {
+        guard let service = service as? Services else {
+            errorRelay.accept(SwiftyRestKitError.serviceError)
+            return Single.just(false)
+        }
+
         return service.fetchTeam(teamID: teamID)
             .map { [weak self] team in
                 self?.addItems(team.players)

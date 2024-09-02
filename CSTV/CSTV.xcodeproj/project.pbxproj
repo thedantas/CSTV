@@ -74,6 +74,12 @@
 		501543A22C85021400F938DD /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 501543A02C85021400F938DD /* ListTableViewCell.xib */; };
 		501543A42C8504BD00F938DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 501543A32C8504BD00F938DD /* Assets.xcassets */; };
 		505534902C8530DF0086422A /* Date+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5055348F2C8530DF0086422A /* Date+Helpers.swift */; };
+		505534942C8539B30086422A /* DetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505534932C8539B30086422A /* DetailsViewModelTests.swift */; };
+		505534962C853A4F0086422A /* MatchListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505534952C853A4F0086422A /* MatchListViewModelTests.swift */; };
+		505534992C853B150086422A /* PlayerDictionaryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505534982C853B150086422A /* PlayerDictionaryMock.swift */; };
+		5055349B2C853B420086422A /* TeamMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5055349A2C853B420086422A /* TeamMock.swift */; };
+		5055349D2C853B590086422A /* MatchsModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5055349C2C853B590086422A /* MatchsModelMock.swift */; };
+		5055349F2C853BFE0086422A /* MockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5055349E2C853BFE0086422A /* MockService.swift */; };
 		5BCAFCB46D6FB8BF89AF799A /* Pods_CSTVTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED0CE849617268C62BAF1463 /* Pods_CSTVTests.framework */; };
 		794A80E5BAE8DAEC66D5D74B /* Pods_CSTV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87963E8869FFEDAE0E1958BC /* Pods_CSTV.framework */; };
 /* End PBXBuildFile section */
@@ -170,6 +176,12 @@
 		501543A02C85021400F938DD /* ListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
 		501543A32C8504BD00F938DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5055348F2C8530DF0086422A /* Date+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Helpers.swift"; sourceTree = "<group>"; };
+		505534932C8539B30086422A /* DetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModelTests.swift; sourceTree = "<group>"; };
+		505534952C853A4F0086422A /* MatchListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListViewModelTests.swift; sourceTree = "<group>"; };
+		505534982C853B150086422A /* PlayerDictionaryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDictionaryMock.swift; sourceTree = "<group>"; };
+		5055349A2C853B420086422A /* TeamMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMock.swift; sourceTree = "<group>"; };
+		5055349C2C853B590086422A /* MatchsModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchsModelMock.swift; sourceTree = "<group>"; };
+		5055349E2C853BFE0086422A /* MockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockService.swift; sourceTree = "<group>"; };
 		87963E8869FFEDAE0E1958BC /* Pods_CSTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CSTV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D07A6738A00E78CE5A269EB3 /* Pods-CSTV-CSTVUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSTV-CSTVUITests.release.xcconfig"; path = "Target Support Files/Pods-CSTV-CSTVUITests/Pods-CSTV-CSTVUITests.release.xcconfig"; sourceTree = "<group>"; };
 		ED0CE849617268C62BAF1463 /* Pods_CSTVTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CSTVTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -232,10 +244,10 @@
 			children = (
 				5015430D2C7E397300F938DD /* AppDelegate */,
 				5015434E2C7E3DC200F938DD /* Views */,
-				501543222C7E3BA100F938DD /* Network */,
 				501543172C7E3ADA00F938DD /* ViewModels */,
 				501543122C7E3AA400F938DD /* Models */,
 				5015430F2C7E3A7100F938DD /* Helpers */,
+				501543222C7E3BA100F938DD /* Network */,
 				501543522C7E3E1600F938DD /* Resources */,
 				501542E82C7E389E00F938DD /* LaunchScreen.storyboard */,
 			);
@@ -253,8 +265,11 @@
 		501542FD2C7E389E00F938DD /* CSTVUITests */ = {
 			isa = PBXGroup;
 			children = (
+				505534972C853B000086422A /* Mocks */,
 				501542FE2C7E389E00F938DD /* CSTVUITests.swift */,
 				501543002C7E389E00F938DD /* CSTVUITestsLaunchTests.swift */,
+				505534932C8539B30086422A /* DetailsViewModelTests.swift */,
+				505534952C853A4F0086422A /* MatchListViewModelTests.swift */,
 			);
 			path = CSTVUITests;
 			sourceTree = "<group>";
@@ -529,6 +544,17 @@
 				501543952C7E426A00F938DD /* TeamTwoDetailView.swift */,
 			);
 			path = DetailsView;
+			sourceTree = "<group>";
+		};
+		505534972C853B000086422A /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				505534982C853B150086422A /* PlayerDictionaryMock.swift */,
+				5055349C2C853B590086422A /* MatchsModelMock.swift */,
+				5055349A2C853B420086422A /* TeamMock.swift */,
+				5055349E2C853BFE0086422A /* MockService.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		5E0BCE1A96C05159C8DEA8D8 /* Frameworks */ = {
@@ -868,8 +894,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				505534962C853A4F0086422A /* MatchListViewModelTests.swift in Sources */,
+				505534942C8539B30086422A /* DetailsViewModelTests.swift in Sources */,
+				505534992C853B150086422A /* PlayerDictionaryMock.swift in Sources */,
+				5055349D2C853B590086422A /* MatchsModelMock.swift in Sources */,
 				501543012C7E389E00F938DD /* CSTVUITestsLaunchTests.swift in Sources */,
+				5055349B2C853B420086422A /* TeamMock.swift in Sources */,
 				501542FF2C7E389E00F938DD /* CSTVUITests.swift in Sources */,
+				5055349F2C853BFE0086422A /* MockService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
